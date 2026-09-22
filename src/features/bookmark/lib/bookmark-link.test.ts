@@ -5,17 +5,17 @@ import { getBookmarkExternalHref } from "./bookmark-link"
 describe("getBookmarkExternalHref", () => {
   it("appends utm_source", () => {
     expect(getBookmarkExternalHref("https://example.com/page")).toBe(
-      "https://example.com/page?utm_source=chanhdai.com"
+      "https://example.com/page?utm_source=rehanirani.dev"
     )
   })
 
   it("preserves params already on the url", () => {
-    const href = getBookmarkExternalHref("https://example.com?atp=ncdai")
+    const href = getBookmarkExternalHref("https://example.com?existing=param")
 
-    expect(href).toContain("atp=ncdai")
-    expect(href).toContain("utm_source=chanhdai.com")
-    expect(href.indexOf("atp=ncdai")).toBeLessThan(
-      href.indexOf("utm_source=chanhdai.com")
+    expect(href).toContain("existing=param")
+    expect(href).toContain("utm_source=rehanirani.dev")
+    expect(href.indexOf("existing=param")).toBeLessThan(
+      href.indexOf("utm_source=rehanirani.dev")
     )
   })
 
@@ -25,7 +25,7 @@ describe("getBookmarkExternalHref", () => {
 
   it("normalizes bare origins with a trailing slash", () => {
     expect(getBookmarkExternalHref("https://animations.dev")).toBe(
-      "https://animations.dev/?utm_source=chanhdai.com"
+      "https://animations.dev/?utm_source=rehanirani.dev"
     )
   })
 })

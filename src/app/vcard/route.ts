@@ -17,7 +17,10 @@ export async function GET() {
     .addPhoneNumber(decodePhoneNumber(USER.phoneNumberB64))
     .addAddress(USER.address)
     .addEmail(decodeEmail(USER.emailB64))
-    .addURL(USER.website)
+
+  if (USER.website) {
+    card.addURL(USER.website)
+  }
 
   const photo = await getVCardPhoto(USER.avatar)
   if (photo) {
@@ -27,6 +30,8 @@ export async function GET() {
   if (USER.jobs.length > 0) {
     const company = USER.jobs[0]
     card.addCompany(company.company).addJobtitle(company.title)
+  } else {
+    card.addJobtitle(USER.jobTitle)
   }
 
   return new NextResponse(card.toString(), {

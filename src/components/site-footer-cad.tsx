@@ -5,40 +5,19 @@ import type { BuildInfo } from "@/lib/build-info"
 import { getBuildInfo, getStack } from "@/lib/build-info"
 import { cn } from "@/lib/utils"
 import { Separator } from "@/components/ui/separator"
-import { DmcaIcon, GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons"
-import { SiteFooterInteractiveLogotype } from "@/components/site-footer-brand"
+import { GitHubIcon, LinkedInIcon } from "@/components/icons"
 import { SOCIAL } from "@/features/portfolio/data/social-links"
 
 // Imported here rather than through `@/config/site`, which client components
 // pull in, to keep the manifest out of client bundles.
 import packageJson from "../../package.json"
-// Precomputed by `pnpm registry:build`, so the count costs no registry import.
-import registryStats from "../../registry-stats.json"
-import { ChanhDaiMark } from "./chanhdai-mark"
 
-const INSPIRED_BY = [
-  "Tailwind CSS",
-  "shadcn/ui",
-  "Vercel",
-  "Evil Charts",
-  "Devouring Details",
-  "Skiper UI",
-  "Making Software",
-  "shadcncraft",
-]
-
-const OPENPANEL_URL =
-  "https://openpanel.dev?utm_source=chanhdai.com&utm_medium=referral&utm_campaign=footer"
-
-// Not derived from `SITE_INFO.url`: that follows `NEXT_PUBLIC_APP_URL` and
-// would read `ncdai.localhost` in dev.
-const SITE_TITLE = "chanhdai.com"
+const SITE_TITLE = "Rehan Irani"
 
 const SITE_SUBTITLE = packageJson.description
 
 /** Footer laid out as the title block of a technical drawing. */
 export function SiteFooterCad() {
-  const xLink = SOCIAL.x
   const githubLink = SOCIAL.github
   const linkedinLink = SOCIAL.linkedin
 
@@ -64,11 +43,11 @@ export function SiteFooterCad() {
             <Field label="Crafted by">
               <a
                 className="link-underline"
-                href={xLink.href}
+                href={githubLink.href}
                 target="_blank"
                 rel="noopener"
               >
-                {xLink.handle}
+                Rehan Irani
               </a>
             </Field>
 
@@ -79,8 +58,6 @@ export function SiteFooterCad() {
             <Field label="Date">
               <time dateTime={build.date}>{build.date}</time>
             </Field>
-
-            <Field label="Registry">{registryStats.total} items</Field>
 
             <Field label="Deployed on">
               <span className="font-sans" aria-hidden>
@@ -123,65 +100,8 @@ export function SiteFooterCad() {
 
             <Field label="Analytics">
               <ul className="flex flex-col gap-0.5">
-                <li>
-                  <a
-                    className="link-underline"
-                    href={OPENPANEL_URL}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    OpenPanel
-                  </a>
-                </li>
                 <li>Google Analytics</li>
               </ul>
-            </Field>
-
-            <Field label="For agents">
-              <ul className="flex flex-col gap-0.5">
-                <li>
-                  <a
-                    className="link-underline"
-                    href="/llms.txt"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    llms.txt
-                  </a>
-                </li>
-                <li>
-                  <a
-                    className="link-underline"
-                    href="/index.md"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    index.md
-                  </a>
-                </li>
-              </ul>
-            </Field>
-
-            <Field className="col-span-2 md:col-span-4" label="Inspired by">
-              {/*
-                Cancelling the cell padding and repeating the parent's column
-                count and gap lands these columns on the same grid lines as the
-                cells above, rather than dividing the padded width.
-              */}
-              <ol className="-mx-4 grid grid-cols-2 gap-x-px gap-y-0.5 font-sans md:grid-cols-4">
-                {INSPIRED_BY.map((name, index) => (
-                  <li className="flex gap-2 px-4" key={name}>
-                    {/* Hidden: the list element already conveys the position. */}
-                    <span
-                      className="font-mono text-muted-foreground/80"
-                      aria-hidden
-                    >
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    {name}
-                  </li>
-                ))}
-              </ol>
             </Field>
           </dl>
         </div>
@@ -191,26 +111,11 @@ export function SiteFooterCad() {
         <div className="screen-line-top screen-line-bottom flex items-center gap-3 screen-line-bottom-border px-4 py-3 text-muted-foreground">
           <Link
             href="/"
-            className="mr-auto text-muted-foreground transition-[color] hover:text-foreground"
+            className="mr-auto font-semibold tracking-tight text-foreground"
             aria-label="Home"
           >
-            <ChanhDaiMark className="h-4" />
+            {SITE_TITLE}
           </Link>
-
-          <a
-            className="flex items-center transition-[color] hover:text-foreground"
-            href={xLink.href}
-            target="_blank"
-            rel="noopener"
-            aria-label="X Profile"
-          >
-            <XIcon className="size-4" />
-          </a>
-
-          <Separator
-            orientation="vertical"
-            className="data-vertical:h-4 data-vertical:self-center"
-          />
 
           <a
             className="flex items-center transition-[color] hover:text-foreground"
@@ -236,28 +141,8 @@ export function SiteFooterCad() {
           >
             <LinkedInIcon className="size-4" />
           </a>
-
-          <Separator
-            orientation="vertical"
-            className="data-vertical:h-4 data-vertical:self-center"
-          />
-
-          <a
-            className="flex items-center transition-[color] hover:text-foreground"
-            href={
-              process.env.NEXT_PUBLIC_DMCA_URL ||
-              "https://www.dmca.com/ProtectionPro.aspx"
-            }
-            target="_blank"
-            rel="noopener"
-            aria-label="DMCA.com Protection Status"
-          >
-            <DmcaIcon className="h-4 w-auto" />
-          </a>
         </div>
       </div>
-
-      <SiteFooterInteractiveLogotype />
 
       <div className="h-(--fade-bottom-height)" />
       <div className="pb-[env(safe-area-inset-bottom,0)]" />

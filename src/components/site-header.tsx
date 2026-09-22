@@ -4,7 +4,6 @@ import Link from "next/link"
 
 import { MAIN_NAV } from "@/config/site"
 import { Separator } from "@/components/ui/separator"
-import { ChanhDaiMark } from "@/components/chanhdai-mark"
 import { InkFilter } from "@/components/ink-filter"
 import { NavDesktop } from "@/components/nav-desktop"
 import { NavItemGitHub } from "@/components/nav-item-github"
@@ -15,6 +14,7 @@ import { sortBookmarksNewestFirst } from "@/features/bookmark/lib/sort"
 import type { BookmarkPreview } from "@/features/bookmark/types"
 import { getAllDocs } from "@/features/doc/data/documents"
 import type { DocPreview } from "@/features/doc/types/document"
+import { USER } from "@/features/portfolio/data/user"
 
 const BrandContextMenu = dynamic(
   () => import("@/components/brand-context-menu")
@@ -47,7 +47,9 @@ export function SiteHeader() {
           <Link href="/" aria-label="Home">
             <span className="flex" style={{ filter: `url(#${inkId})` }}>
               <InkFilter id={inkId} density={2} />
-              <ChanhDaiMark className="h-6 shrink-0" />
+              <span className="h-6 shrink-0 font-bold tracking-tight text-foreground">
+                {USER.displayName}
+              </span>
             </span>
           </Link>
         </BrandContextMenu>

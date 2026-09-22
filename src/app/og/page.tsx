@@ -1,10 +1,10 @@
-import { ChanhDaiMarkIsometric } from "@/features/portfolio/components/chanhdai-mark-isometric"
+import { USER } from "@/features/portfolio/data/user"
 
 export default function Page() {
   return (
     <div className="max-w-screen overflow-x-clip">
-      <div className="mx-auto flex h-screen flex-col justify-center md:max-w-3xl">
-        <ChanhDaiMarkIsometric />
+      <div className="absolute top-24 left-24 size-[512px] opacity-10">
+        <span className="text-6xl font-bold">{USER.displayName}</span>
       </div>
     </div>
   )

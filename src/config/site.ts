@@ -6,7 +6,7 @@ import { USER } from "@/features/portfolio/data/user"
 
 export const SITE_INFO = {
   name: USER.displayName,
-  url: process.env.NEXT_PUBLIC_APP_URL || "https://chanhdai.com",
+  url: process.env.NEXT_PUBLIC_APP_URL || "https://example.com",
   ogImage: USER.ogImage,
   description: USER.bio,
   keywords: USER.keywords,
@@ -14,7 +14,7 @@ export const SITE_INFO = {
 
 export const LICENSE = {
   name: "MIT License",
-  url: "https://github.com/ncdai/chanhdai.com/blob/main/LICENSE",
+  url: "#",
 }
 
 export const META_THEME_COLORS = {
@@ -23,39 +23,28 @@ export const META_THEME_COLORS = {
 }
 
 export const MAIN_NAV: NavItem<Route>[] = [
-  {
-    title: "Components",
-    href: "/components",
-  },
-  {
-    title: "Blocks",
-    href: "/blocks",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
-  },
-  {
-    title: "Sponsors",
-    href: "/sponsors",
-  },
+  { title: "About", href: "/#about" as Route },
+  { title: "Projects", href: "/#projects" as Route },
+  { title: "Experience", href: "/#experience" as Route },
+  { title: "Achievements", href: "/#achievements" as Route },
+  { title: "Contact", href: "/#contact" as Route },
 ]
 
 export const MOBILE_NAV: NavItem<Route>[] = [
   {
     title: "Home",
-    href: "/",
+    href: "/" as Route,
   },
   ...MAIN_NAV,
 ]
 
-export const X_HANDLE = SOCIAL.x.handle
+export const X_HANDLE = ""
 export const GITHUB_USERNAME = SOCIAL.github.handle
-export const SOURCE_CODE_GITHUB_REPO = "ncdai/chanhdai.com"
-export const SOURCE_CODE_GITHUB_URL = "https://github.com/ncdai/chanhdai.com"
+export const SOURCE_CODE_GITHUB_REPO = "rehaniranii/portfolio"
+export const SOURCE_CODE_GITHUB_URL = "https://github.com/rehaniranii/portfolio"
 
-export const SPONSORSHIP_URL = "https://github.com/sponsors/ncdai"
+export const SPONSORSHIP_URL = ""
 
 export const UTM_PARAMS = {
-  utm_source: "chanhdai.com",
+  utm_source: "rehanirani.dev",
 }

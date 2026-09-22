@@ -62,7 +62,7 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   typedRoutes: true,
   transpilePackages: ["next-mdx-remote"],
-  allowedDevOrigins: ["ncdai.localhost", "ncdai.local"],
+  allowedDevOrigins: ["localhost"],
   devIndicators: false,
   experimental: {
     // Rewrite barrel imports to deep imports so a single icon doesn't pull the
@@ -78,11 +78,6 @@ const nextConfig: NextConfig = {
   },
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "assets.chanhdai.com",
-        port: "",
-      },
       {
         protocol: "https",
         hostname: "images.unsplash.com",

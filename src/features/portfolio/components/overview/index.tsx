@@ -60,19 +60,21 @@ export function Overview() {
 
         <EmailItem emailB64={USER.emailB64} />
 
-        <IntroItem>
-          <IntroItemIcon>
-            <LinkIcon />
-          </IntroItemIcon>
-          <IntroItemContent>
-            <IntroItemLink
-              href={USER.website}
-              aria-label={`Personal website: ${urlToName(USER.website)}`}
-            >
-              {urlToName(USER.website)}
-            </IntroItemLink>
-          </IntroItemContent>
-        </IntroItem>
+        {USER.website && (
+          <IntroItem>
+            <IntroItemIcon>
+              <LinkIcon />
+            </IntroItemIcon>
+            <IntroItemContent>
+              <IntroItemLink
+                href={USER.website}
+                aria-label={`Personal website: ${urlToName(USER.website)}`}
+              >
+                {urlToName(USER.website)}
+              </IntroItemLink>
+            </IntroItemContent>
+          </IntroItem>
+        )}
 
         <IntroItem>
           <IntroItemIcon>{getGenderIcon(USER.gender)}</IntroItemIcon>
