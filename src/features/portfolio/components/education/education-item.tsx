@@ -42,7 +42,19 @@ export function EducationItem({ item }: { item: Education }) {
               <GraduationCapIcon />
             </IconTile>
 
-            <h3 className="flex-1 font-medium text-balance">{item.school}</h3>
+            <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">
+              <h3 className="font-medium text-balance">{item.school}</h3>
+
+              {(item.cgpa || item.grade) && (
+                <Tag className="font-mono">
+                  {item.cgpa
+                    ? item.cgpa.toString().startsWith("CGPA")
+                      ? item.cgpa
+                      : `CGPA: ${item.cgpa}`
+                    : item.grade}
+                </Tag>
+              )}
+            </div>
 
             <div className="shrink-0 text-muted-foreground group-data-disabled:hidden [&_svg]:h-lh [&_svg]:w-4">
               <CollapsibleChevronsUpDownIcon duration={0.15} />

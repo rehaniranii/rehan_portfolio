@@ -4,59 +4,46 @@ export const PROJECTS: Project[] = [
   {
     id: "agro-saathi",
     title: "Agro Saathi",
-    period: {
-      start: "01.2025",
-    },
     link: "",
     skills: [
       "Python",
       "AI/ML",
+      "Plant Disease Detection",
       "Weather API",
-      "Data Analysis",
-      "Agriculture Tech",
+      "Precision Agriculture",
     ],
     description:
-      "An intelligent farming assistant designed to provide real-time, data-driven guidance to farmers using local weather conditions, soil factors, and geographic information.",
+      "Developed an intelligent farming assistant that provides real-time, data-driven guidance to farmers based on local weather conditions, soil factors, and geographic area. Integrated AI-powered plant disease detection to help farmers identify crop issues early and improve yield quality. Designed to make precision farming accessible, AgroSaathi empowers farmers with actionable insights for better decision-making and sustainable agriculture.",
     isExpanded: true,
   },
   {
     id: "algo-trade",
     title: "Algo-Trade",
-    period: {
-      start: "06.2024",
-    },
-    link: "",
-    skills: ["Python", "EMA", "SMA", "MACD", "Backtesting", "Position Sizing"],
-    description:
-      "A Python-based multi-factor algorithmic trading system integrating trend, momentum and volatility indicators. *Note: Backtesting results showed promising performance metrics including Sharpe Ratio evaluation and maximum drawdown analysis.*",
-  },
-  {
-    id: "somaiyasat",
-    title: "SomaiyaSat & SomaiyaPod",
-    period: {
-      start: "03.2025",
-    },
     link: "",
     skills: [
-      "PocketQube",
-      "AI Routing",
-      "M17",
-      "Codec2",
-      "SSTV",
-      "Satellite Computing",
+      "Python",
+      "Algorithmic Trading",
+      "Backtesting",
+      "Risk Management",
+      "MACD",
+      "EMA / SMA",
     ],
     description:
-      "A PocketQube mission concept featuring autonomous AI-based inter-satellite data routing and advanced multi-mode amateur radio payloads.",
+      "Designed and implemented a multi factor algorithmic trading system using Python, integrating trends (EMA, SMA), momentum (MACD) and volatility based indicators. Developed a backtesting engine with dynamic risk management (position sizing, stop loss, trailing stop loss) and evaluated performance using risk adjusted metrics such as Sharpe Ratio and maximum drawdown on real world market data. Achieved ~30% win rate under adverse market conditions while maintaining controlled drawdowns and positive risk-adjusted returns.",
   },
   {
-    id: "kr-irani-website",
-    title: "K.R. Irani & Sons Website",
-    period: {
-      start: "09.2024",
-    },
+    id: "aushadhcheck",
+    title: "AushadhCheck",
     link: "",
-    skills: ["React", "Vite", "Tailwind CSS", "shadcn/ui", "Responsive Design"],
+    skills: [
+      "FastAPI",
+      "PostgreSQL",
+      "Python",
+      "REST APIs",
+      "Automated Ingestion",
+      "Batch Verification",
+    ],
     description:
-      "A modern company website developed for K.R. Irani & Sons, a manufacturing business producing oils, paints, varnishes and related products.",
+      "Developed a medicine safety platform that verifies drug batches against CDSCO Not-of-Standard-Quality (NSQ) alerts, enabling users to identify potentially unsafe medicines. Built REST APIs using FastAPI with PostgreSQL for drug-alert data management and integrated automated data ingestion, batch-level verification, and a notification pipeline to alert users when previously scanned medicines are flagged in newly published alerts.",
   },
 ]

@@ -10,4 +10,6 @@ export type Education = {
   description?: string
   skills?: string[]
   isExpanded?: boolean
+  cgpa?: string | number
+  grade?: string
 }

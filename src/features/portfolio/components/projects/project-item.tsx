@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { addQueryParams } from "@/utils/url"
-import { BoxIcon, InfinityIcon, LinkIcon } from "lucide-react"
+import { BoxIcon, LinkIcon } from "lucide-react"
 
 import { UTM_PARAMS } from "@/config/site"
 import {
@@ -29,10 +29,6 @@ export function ProjectItem({
   className?: string
   project: Project
 }) {
-  const { start, end } = project.period
-  const isOngoing = !end
-  const isSinglePeriod = end === start
-
   return (
     <Collapsible className={className} defaultOpen={project.isExpanded}>
       <CollapsibleTrigger className="group/project flex w-full items-center text-left hover:bg-accent-muted">
@@ -53,29 +49,9 @@ export function ProjectItem({
 
         <div className="flex flex-1 items-center gap-2 border-l border-dashed border-line p-4 pr-2">
           <div className="flex-1">
-            <h3 className="mb-1 leading-snug font-medium text-balance">
+            <h3 className="leading-snug font-medium text-balance">
               {project.title}
             </h3>
-
-            <dl className="text-sm text-muted-foreground">
-              <dt className="sr-only">Period</dt>
-              <dd className="flex items-center gap-0.5">
-                <span>{start}</span>
-                {!isSinglePeriod && (
-                  <>
-                    <span className="font-mono">—</span>
-                    {isOngoing ? (
-                      <InfinityIcon
-                        className="size-4.5 translate-y-[0.5px]"
-                        aria-label="Present"
-                      />
-                    ) : (
-                      <span>{end}</span>
-                    )}
-                  </>
-                )}
-              </dd>
-            </dl>
           </div>
 
           <Tooltip>

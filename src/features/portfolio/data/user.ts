@@ -9,7 +9,7 @@ export const USER: User = {
   pronouns: "he/him",
   bio: "Information Technology student building with code, AI, and curiosity.",
   flipSentences: [
-    "Information Technology student building with code, AI, and curiosity.",
+    "IT student building with code, AI, and curiosity.",
     "Building practical technology projects.",
     "Exploring AI and software development.",
   ],
@@ -22,6 +22,7 @@ export const USER: User = {
   about:
     "Rehan Irani is an Information Technology student at K.J. Somaiya School of Engineering in Mumbai. Areas of interest include software development, artificial intelligence and machine learning, web development, problem solving, and building practical technology projects.",
   avatar: "/images/avatar-placeholder.svg",
+  banner: "/images/banner.png",
   avatarVariants: {
     lightOff: "/images/avatar-placeholder.svg",
     lightOn: "/images/avatar-placeholder.svg",

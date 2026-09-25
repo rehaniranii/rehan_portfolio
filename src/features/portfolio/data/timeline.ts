@@ -23,10 +23,10 @@ Core Team Cynosure (2022-2023).`,
   {
     year: 2024,
     content:
-      "Began volunteering at Enrich Lives Foundation (Dec 2024).\nStarted Algo-Trade and K.R. Irani & Sons Website projects.",
+      "Began volunteering at Enrich Lives Foundation (Dec 2024).\nStarted Algo-Trade project.",
   },
   {
     year: 2025,
-    content: "Started Agro Saathi and SomaiyaSat & SomaiyaPod projects.",
+    content: "Started Agro Saathi and AushadhCheck projects.",
   },
 ]
