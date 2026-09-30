@@ -158,11 +158,16 @@ function formatDuration(start: string, end?: string): string {
 }
 
 function parsePeriodDate(str: string, fallbackMonth: "first" | "last"): Date {
-  if (str.includes(".")) {
-    return parse(str, "MM.yyyy", new Date())
+  const normalized = str.replaceAll("/", ".")
+  const parts = normalized.split(".")
+  if (parts.length === 3) {
+    return parse(normalized, "dd.MM.yyyy", new Date())
+  }
+  if (parts.length === 2) {
+    return parse(normalized, "MM.yyyy", new Date())
   }
   return parse(
-    `${fallbackMonth === "last" ? "12" : "01"}.${str}`,
+    `${fallbackMonth === "last" ? "12" : "01"}.${normalized}`,
     "MM.yyyy",
     new Date()
   )

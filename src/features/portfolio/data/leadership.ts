@@ -2,6 +2,14 @@ import type { LeadershipRole } from "../types/leadership"
 
 export const LEADERSHIP_ROLES: LeadershipRole[] = [
   {
+    id: "csi-kjsse",
+    title: "Operations and PR Member",
+    organization: "CSI KJSSE",
+    period: "July 2026 - Present",
+    description:
+      "Operations and PR member at CSI KJSSE (Computer Society of India student chapter) since 4th July 2026, coordinating club operations, event logistics, and public relations initiatives.",
+  },
+  {
     id: "head-boy",
     title: "Head Boy",
     organization: "St. Gregorios High School",

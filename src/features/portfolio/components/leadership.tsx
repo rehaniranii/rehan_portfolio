@@ -19,7 +19,7 @@ export function Leadership() {
     <Panel id={ID}>
       <PanelHeader>
         <PanelTitle>
-          <a href={`#${ID}`}>Leadership</a>
+          <a href={`#${ID}`}>Leadership and community</a>
           <PanelTitleSup>({LEADERSHIP_ROLES.length})</PanelTitleSup>
           <PanelTitleCopy id={ID} />
         </PanelTitle>

@@ -23,10 +23,15 @@ Core Team Cynosure (2022-2023).`,
   {
     year: 2024,
     content:
-      "Began volunteering at Enrich Lives Foundation (Dec 2024).\nStarted Algo-Trade project.",
+      "Began volunteering at Enrich Lives Foundation (Dec 2024 – Feb 2025).\nStarted Algo-Trade project.",
   },
   {
     year: 2025,
     content: "Started Agro Saathi and AushadhCheck projects.",
+  },
+  {
+    year: 2026,
+    content: `Full Stack Developer at SwDC KJSSE (AgriPrice).
+Joined CSI KJSSE as Operations and PR Member.`,
   },
 ]
