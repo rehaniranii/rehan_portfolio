@@ -21,13 +21,13 @@ export const USER: User = {
   jobs: [],
   about:
     "Rehan Irani is an Information Technology student at K.J. Somaiya School of Engineering in Mumbai. Areas of interest include software development, artificial intelligence and machine learning, web development, problem solving, and building practical technology projects.",
-  avatar: "/images/avatar-placeholder.svg",
+  avatar: "/images/avatar.jpg",
   banner: "/images/banner.png",
   avatarVariants: {
-    lightOff: "/images/avatar-placeholder.svg",
-    lightOn: "/images/avatar-placeholder.svg",
-    darkOff: "/images/avatar-placeholder.svg",
-    darkOn: "/images/avatar-placeholder.svg",
+    lightOff: "/images/avatar.jpg",
+    lightOn: "/images/avatar.jpg",
+    darkOff: "/images/avatar.jpg",
+    darkOn: "/images/avatar.jpg",
   },
   ogImage: "/images/og-placeholder.png",
   namePronunciationUrl: "",

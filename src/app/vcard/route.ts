@@ -45,19 +45,29 @@ export async function GET() {
 
 async function getVCardPhoto(url: string) {
   try {
-    const res = await fetch(url)
+    let buffer: Buffer
+    let contentType = ""
 
-    if (!res.ok) {
-      return null
+    if (url.startsWith("/")) {
+      const fs = await import("fs/promises")
+      const path = await import("path")
+      const filePath = path.join(process.cwd(), "public", url)
+      buffer = await fs.readFile(filePath)
+      contentType = url.endsWith(".png")
+        ? "image/png"
+        : url.endsWith(".webp")
+          ? "image/webp"
+          : "image/jpeg"
+    } else {
+      const res = await fetch(url)
+      if (!res.ok) {
+        return null
+      }
+      buffer = Buffer.from(await res.arrayBuffer())
+      contentType = res.headers.get("Content-Type") || ""
     }
 
-    const buffer = Buffer.from(await res.arrayBuffer())
-    if (buffer.length === 0) {
-      return null
-    }
-
-    const contentType = res.headers.get("Content-Type") || ""
-    if (!contentType.startsWith("image/")) {
+    if (buffer.length === 0 || !contentType.startsWith("image/")) {
       return null
     }
 
