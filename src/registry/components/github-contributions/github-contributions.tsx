@@ -31,6 +31,10 @@ export function GitHubContributions({
 }) {
   const data = use(contributions)
 
+  if (!data || data.length === 0) {
+    return null
+  }
+
   return (
     <ContributionGraph
       className={cn("mx-auto py-2", className)}
