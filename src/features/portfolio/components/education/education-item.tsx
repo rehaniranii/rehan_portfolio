@@ -43,10 +43,12 @@ export function EducationItem({ item }: { item: Education }) {
             </IconTile>
 
             <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">
-              <h3 className="font-medium text-balance">{item.school}</h3>
+              <h3 className="text-base font-medium text-balance">
+                {item.school}
+              </h3>
 
               {(item.cgpa || item.grade) && (
-                <Tag className="font-mono">
+                <Tag>
                   {item.cgpa
                     ? item.cgpa.toString().startsWith("CGPA")
                       ? item.cgpa
@@ -66,12 +68,11 @@ export function EducationItem({ item }: { item: Education }) {
               <dt className="sr-only">Study period</dt>
               <dd className="flex items-center gap-0.5 tabular-nums">
                 <span>{start}</span>
-                <span className="font-mono">—</span>
+                <span aria-hidden>—</span>
                 {isOngoing ? (
                   <InfinityIcon
-                    className="size-4.5 translate-y-[0.5px]"
+                    className="size-4 translate-y-[0.5px]"
                     aria-label="Present"
-                    strokeWidth={1.5}
                   />
                 ) : (
                   <span>{end}</span>

@@ -172,7 +172,7 @@ function TestimonialItem({
 }: TestimonialType & { className?: string; showIcon?: boolean }) {
   return (
     <Testimonial className={cn("group/testimonial relative", className)}>
-      <TestimonialQuote className="font-serif text-base">
+      <TestimonialQuote className="font-sans text-sm">
         <p>
           <Twemoji className="grayscale transition-[filter] duration-300 ease-[cubic-bezier(0.42,0,0.58,1)] group-hover/testimonial:grayscale-0">
             {quote}

@@ -7,7 +7,7 @@ export const EXPERIENCES: Experience[] = [
     id: "swdc-kjsse",
     companyName: "SwDC (Software Development Cell) KJSSE",
     companyWebsite: "https://swdc.somaiya.edu/p/agriprice/",
-    companyIcon: <BriefcaseBusinessIcon strokeWidth={1.8} />,
+    companyIcon: <BriefcaseBusinessIcon />,
     location: "Mumbai, India",
     locationType: "On-site",
     positions: [
@@ -41,7 +41,7 @@ export const EXPERIENCES: Experience[] = [
   {
     id: "enrich-lives-foundation",
     companyName: "Enrich Lives Foundation",
-    companyIcon: <BriefcaseBusinessIcon strokeWidth={1.8} />,
+    companyIcon: <BriefcaseBusinessIcon />,
     location: "Mumbai, India",
     positions: [
       {

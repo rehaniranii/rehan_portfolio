@@ -46,7 +46,9 @@ export function ExperiencePositionItem({
         <div className="relative z-1 mb-1 flex items-start gap-3 text-base">
           <IconTile>{position.icon ?? <BriefcaseBusinessIcon />}</IconTile>
 
-          <h4 className="flex-1 font-medium text-balance">{position.title}</h4>
+          <h4 className="flex-1 text-base font-medium text-balance">
+            {position.title}
+          </h4>
 
           <div className="shrink-0 text-muted-foreground group-data-disabled:hidden [&_svg]:h-lh [&_svg]:w-4">
             <CollapsibleChevronsUpDownIcon duration={0.15} />
@@ -73,12 +75,11 @@ export function ExperiencePositionItem({
             <dt className="sr-only">Employment Period</dt>
             <dd className="flex items-center gap-0.5 tabular-nums">
               <span>{start}</span>
-              <span className="font-mono">—</span>
+              <span aria-hidden>—</span>
               {isOngoing ? (
                 <InfinityIcon
-                  className="size-4.5 translate-y-[0.5px]"
+                  className="size-4 translate-y-[0.5px]"
                   aria-label="Present"
-                  strokeWidth={1.5}
                 />
               ) : (
                 <span>{end}</span>

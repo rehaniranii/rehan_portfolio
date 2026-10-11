@@ -1,4 +1,16 @@
-import { GitHubIcon, ShadcnIcon } from "@/components/icons"
+import { AtomIcon, DatabaseIcon, FileSpreadsheetIcon } from "lucide-react"
+
+import {
+  CppIcon,
+  GitHubIcon,
+  JsIcon,
+  QiskitIcon,
+  ReactIcon,
+  ScikitLearnIcon,
+  ShadcnIcon,
+  TailwindCssIcon,
+  TsIcon,
+} from "@/components/icons"
 
 import type { TechStack } from "../types/tech-stack"
 
@@ -22,54 +34,28 @@ export const TECH_STACK: TechStack[] = [
     key: "cpp",
     title: "C++",
     href: "https://isocpp.org/",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <text x="0" y="20" fontSize="24" fill="currentColor" fontWeight="bold">
-          C++
-        </text>
-      </svg>
-    ),
+    icon: <CppIcon />,
     categories: ["Language"],
   },
   {
     key: "sql",
     title: "SQL",
     href: "https://en.wikipedia.org/wiki/SQL",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <text x="0" y="18" fontSize="18" fill="currentColor" fontWeight="bold">
-          SQL
-        </text>
-      </svg>
-    ),
+    icon: <DatabaseIcon />,
     categories: ["Language"],
   },
   {
     key: "javascript",
     title: "JavaScript",
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.463.695-.668 1.43-.514.714.15 1.19.495 1.486 1.06.075.136.195.195.345.195h1.77c.18 0 .315-.12.33-.285a4.015 4.015 0 0 0-1.2-3.136c-.9-.81-2.475-1.17-4.11-1.17-2.61 0-4.425.96-5.31 2.536-.51 1.005-.66 2.25-.405 3.39.375 1.77 1.8 2.82 4.155 3.69 1.155.45 1.635.84 1.755 1.47.09.465-.015.84-.36 1.14-.54.435-1.56.555-2.58.33-.87-.21-1.545-.72-1.92-1.425a.333.333 0 0 0-.3-.195h-1.92c-.18 0-.315.15-.285.33.24 1.71 1.41 3.09 3.255 3.69 2.13.72 4.635.63 6.36-.615 1.455-1.02 2.19-2.505 2.16-4.14zM10.873 9.77a.326.326 0 0 0-.3-.196h-1.89c-.18 0-.33.15-.33.33v8.52c-.03.735-.24 1.275-.585 1.575-.435.39-1.095.495-1.905.345a1.86 1.86 0 0 1-1.305-.885.347.347 0 0 0-.3-.195h-1.89c-.195 0-.33.15-.3.33.255 1.68 1.455 3.015 3.3 3.525 2.58.735 4.755.33 5.925-1.2.945-1.23 1.35-2.88 1.275-5.325V10.1c0-.18-.135-.33-.33-.33h.33z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: <JsIcon />,
     categories: ["Language"],
   },
   {
     key: "typescript",
     title: "TypeScript",
     href: "https://www.typescriptlang.org/",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c3.125 0 5.353 1.859 5.353 5.354 0 2.274-1.231 4.548-3.41 5.353v-2.09c1.074-.45 1.57-1.397 1.57-2.616 0-1.611-1.032-2.438-2.686-2.438-1.53 0-2.604.869-2.604 2.522 0 1.942 3.844 1.776 3.844 5.372 0 2.935-2.274 4.505-5.188 4.505-3.092 0-5.332-1.943-5.332-5.407 0-2.356 1.405-4.547 3.538-5.353v2.09c-1.116.455-1.695 1.446-1.695 2.662 0 1.736 1.157 2.603 2.81 2.603 1.695 0 2.687-.991 2.687-2.685 0-1.819-3.844-1.696-3.844-5.333 0-2.935 2.191-4.539 4.957-4.539zM8.384 10.453v13.064H5.275V10.453H0V7.931h13.659v2.522z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: <TsIcon />,
     categories: ["Language"],
   },
 
@@ -78,28 +64,14 @@ export const TECH_STACK: TechStack[] = [
     key: "react",
     title: "React",
     href: "https://react.dev/",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M12 21.032c-3.132 0-5.918-.758-7.85-2.128C1.862 17.288 1.045 15.021 1.045 12s.817-5.288 3.105-6.904C6.082 3.726 8.868 2.968 12 2.968c3.132 0 5.918.758 7.85 2.128 2.288 1.616 3.105 3.883 3.105 6.904s-.817 5.288-3.105 6.904c-1.932 1.37-4.718 2.128-7.85 2.128m0-1.896c2.818 0 5.16-.688 6.756-1.815C20.312 16.222 20.97 14.331 20.97 12c0-2.331-.658-4.222-2.214-5.321-1.596-1.127-3.938-1.815-6.756-1.815s-5.16.688-6.756 1.815C3.688 7.778 3.03 9.669 3.03 12c0 2.331.658 4.222 2.214 5.321 1.596 1.127 3.938 1.815 6.756 1.815m0-6.19a2.946 2.946 0 1 1 0-5.892 2.946 2.946 0 0 1 0 5.892m-8.41-3.693l1.642.948A4.015 4.015 0 0 1 8.01 7.24a4.015 4.015 0 0 1 2.502-1.74l-.948-1.641a5.912 5.912 0 0 0-3.688 2.56 5.912 5.912 0 0 0-2.286 2.834m16.82 0a5.912 5.912 0 0 0-5.974-5.394l-.948 1.642a4.015 4.015 0 0 1 5.28 4.7l1.642-.948m-16.82 7.386a5.912 5.912 0 0 0 5.974 5.394l.948-1.642a4.015 4.015 0 0 1-5.28-4.7l-1.642.948m16.82 0l-1.642-.948a4.015 4.015 0 0 1-2.778 2.951 4.015 4.015 0 0 1-2.502 1.74l.948 1.641a5.912 5.912 0 0 0 3.688-2.56 5.912 5.912 0 0 0 2.286-2.834"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: <ReactIcon />,
     categories: ["Web"],
   },
   {
     key: "tailwindcss",
     title: "Tailwind CSS",
     href: "https://tailwindcss.com/",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <path
-          d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
-          fill="currentColor"
-        />
-      </svg>
-    ),
+    icon: <TailwindCssIcon />,
     categories: ["Web"],
   },
   {
@@ -150,13 +122,7 @@ export const TECH_STACK: TechStack[] = [
     key: "excel",
     title: "Excel",
     href: "https://www.microsoft.com/en-us/microsoft-365/excel",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <text x="0" y="18" fontSize="18" fill="currentColor" fontWeight="bold">
-          XLS
-        </text>
-      </svg>
-    ),
+    icon: <FileSpreadsheetIcon />,
     categories: ["Tools"],
   },
 
@@ -165,39 +131,21 @@ export const TECH_STACK: TechStack[] = [
     key: "scikit-learn",
     title: "scikit-learn",
     href: "https://scikit-learn.org/",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <text x="0" y="18" fontSize="16" fill="currentColor" fontWeight="bold">
-          SKL
-        </text>
-      </svg>
-    ),
+    icon: <ScikitLearnIcon />,
     categories: ["AI/ML"],
   },
   {
     key: "qiskit",
     title: "Qiskit",
     href: "https://qiskit.org/",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <text x="0" y="18" fontSize="16" fill="currentColor" fontWeight="bold">
-          Qis
-        </text>
-      </svg>
-    ),
+    icon: <QiskitIcon />,
     categories: ["AI/ML"],
   },
   {
     key: "pennylane",
     title: "PennyLane",
     href: "https://pennylane.ai/",
-    icon: (
-      <svg viewBox="0 0 24 24" aria-hidden>
-        <text x="0" y="18" fontSize="16" fill="currentColor" fontWeight="bold">
-          Pen
-        </text>
-      </svg>
-    ),
+    icon: <AtomIcon />,
     categories: ["AI/ML"],
   },
 ]

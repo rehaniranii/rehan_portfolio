@@ -648,7 +648,7 @@
 }
 
 .typeset-description {
-  --typeset-size: 15px;
+  --typeset-size: 0.875rem;
   --typeset-leading: 1.6;
   --typeset-flow: 1em;
 

@@ -25,7 +25,7 @@ export function Contact() {
       </PanelHeader>
 
       <PanelContent>
-        <p className="mb-6 text-balance text-muted-foreground">
+        <p className="mb-6 text-sm/relaxed text-balance text-muted-foreground">
           Interested in collaborating, have a question, or just want to say
           hello? Feel free to reach out.
         </p>

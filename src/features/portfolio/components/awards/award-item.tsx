@@ -1,5 +1,5 @@
 import { format } from "date-fns"
-import { Crown, Paperclip } from "lucide-react"
+import { AwardIcon, PaperclipIcon } from "lucide-react"
 
 import {
   CollapsibleContent,
@@ -31,11 +31,11 @@ export function AwardItem({
   return (
     <Collapsible className={className} disabled={!canExpand}>
       <CollapsibleTrigger className="flex w-full items-center text-left hover:bg-accent-muted">
-        <IconTile className="mx-4">{award.icon ?? <Crown />}</IconTile>
+        <IconTile className="mx-4">{award.icon ?? <AwardIcon />}</IconTile>
 
         <div className="flex flex-1 items-center gap-2 border-l border-dashed border-line p-4 pr-2">
           <div className="flex-1">
-            <h3 className="mb-1 leading-snug font-medium text-balance">
+            <h3 className="mb-1 text-base/snug font-medium text-balance">
               {award.title}
             </h3>
 
@@ -78,13 +78,13 @@ export function AwardItem({
               <TooltipTrigger
                 render={
                   <a
-                    className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4"
+                    className="relative flex size-6 shrink-0 items-center justify-center text-muted-foreground after:absolute after:-inset-2 hover:text-foreground"
                     href={award.referenceLink}
                     target="_blank"
                     rel="noopener"
                     aria-label="Open reference attachment"
                   >
-                    <Paperclip />
+                    <PaperclipIcon className="pointer-events-none size-4" />
                   </a>
                 }
               />

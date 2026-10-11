@@ -13,7 +13,7 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
       className="group/experience screen-line-bottom scroll-mt-14 space-y-4 py-4"
     >
       <div className="flex items-start gap-3 sm:items-center">
-        <div className="flex size-6 shrink-0 items-center justify-center select-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-5">
+        <div className="flex size-6 shrink-0 items-center justify-center select-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg]:text-muted-foreground [&_svg:not([class*='size-'])]:size-4">
           {experience.companyLogo ? (
             <Image
               src={experience.companyLogo}
@@ -33,7 +33,7 @@ export function ExperienceItem({ experience }: { experience: Experience }) {
         </div>
 
         <div className="flex min-w-0 flex-1 flex-col gap-x-3 gap-y-1 pr-1 sm:flex-row sm:items-baseline sm:justify-between">
-          <h3 className="text-xl/6 font-medium">
+          <h3 className="text-base/snug font-medium">
             {experience.companyWebsite ? (
               <a
                 className="link"

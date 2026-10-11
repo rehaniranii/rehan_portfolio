@@ -1,8 +1,9 @@
+import { BadgeCheckIcon } from "lucide-react"
+
 import { USER } from "@/features/portfolio/data/user"
 
 import { FlipSentences } from "./flip-sentences"
 import { PronounceMyName } from "./pronounce-my-name"
-import { VerifiedIcon } from "./verified-icon"
 
 export function ProfileHeader() {
   return (
@@ -41,11 +42,14 @@ export function ProfileHeader() {
 
         <div className="flex flex-col justify-end">
           <div className="flex -translate-x-px items-center gap-2 py-2 pl-4 sm:py-3">
-            <h1 className="-translate-y-px text-[1.75rem]/none font-medium tracking-tight sm:text-[2rem]/none">
+            <h1 className="-translate-y-px text-2xl/none font-medium tracking-tight sm:text-3xl/none">
               {USER.displayName}
             </h1>
 
-            <VerifiedIcon className="size-4.5 select-none" aria-hidden />
+            <BadgeCheckIcon
+              className="size-5 shrink-0 text-foreground select-none"
+              aria-hidden
+            />
 
             {USER.namePronunciationUrl && (
               <PronounceMyName

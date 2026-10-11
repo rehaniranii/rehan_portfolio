@@ -42,7 +42,7 @@ function LeadershipItem({ role }: { role: LeadershipRole }) {
       </IconTile>
 
       <div className="flex-1 border-l border-dashed border-line p-4">
-        <h3 className="mb-1 leading-snug font-medium">{role.title}</h3>
+        <h3 className="mb-1 text-base/snug font-medium">{role.title}</h3>
 
         <dl className="flex flex-wrap items-center gap-x-2 text-sm text-muted-foreground">
           <div>
@@ -63,7 +63,7 @@ function LeadershipItem({ role }: { role: LeadershipRole }) {
         </dl>
 
         {role.description && (
-          <p className="mt-2 text-sm text-muted-foreground">
+          <p className="mt-2 text-sm/relaxed text-muted-foreground">
             {role.description}
           </p>
         )}

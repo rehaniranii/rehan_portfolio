@@ -1,8 +1,11 @@
 import Image from "next/image"
-import { CopyrightIcon, Stamp01Icon } from "@hugeicons/core-free-icons"
-import { HugeiconsIcon } from "@hugeicons/react"
 import { format } from "date-fns"
-import { ArrowUpRightIcon, CircleCheckBigIcon } from "lucide-react"
+import {
+  ArrowUpRightIcon,
+  BadgeCheckIcon,
+  CircleCheckBigIcon,
+  CopyrightIcon,
+} from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { IconTile } from "@/components/ui/icon-tile"
@@ -28,12 +31,12 @@ import type { Certification } from "../../types/certifications"
 const ISSUER_ICONS: Record<string, React.ReactNode> = {
   accenture: <AccentureIcon />,
   animationsdev: <AnimationsDevIcon />,
-  copyright: <HugeiconsIcon icon={CopyrightIcon} />,
+  copyright: <CopyrightIcon />,
   coursera: <CourseraIcon />,
   google: <GoogleIcon />,
   meta: <MetaIcon />,
   microsoft: <MicrosoftIcon />,
-  trademark: <HugeiconsIcon icon={Stamp01Icon} />,
+  trademark: <BadgeCheckIcon />,
   vercel: <VercelIcon />,
 }
 
@@ -71,7 +74,7 @@ export function CertificationItem({
       )}
 
       <div className="flex-1 space-y-1 border-l border-dashed border-line p-4 pr-2">
-        <h3 className="leading-snug font-medium text-balance">
+        <h3 className="text-base/snug font-medium text-balance">
           <a href={certification.credentialURL} target="_blank" rel="noopener">
             <span className="absolute inset-0" aria-hidden />
             {certification.title}

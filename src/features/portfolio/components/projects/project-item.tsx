@@ -49,7 +49,7 @@ export function ProjectItem({
 
         <div className="flex flex-1 items-center gap-2 border-l border-dashed border-line p-4 pr-2">
           <div className="flex-1">
-            <h3 className="leading-snug font-medium text-balance">
+            <h3 className="text-base/snug font-medium text-balance">
               {project.title}
             </h3>
           </div>
